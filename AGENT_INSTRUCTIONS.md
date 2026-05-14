@@ -248,6 +248,23 @@ Apply each of the following in every corrected passage:
 | "plant foods" | "meat alternatives," "vegan options" | Treats meat as the default |
 | "ceasing to exploit other animals" | "saving animals," "protecting animals" | Not exploiting someone is the baseline, not heroism |
 
+### Describing people who continue to exploit other animals
+
+"Meat, dairy and egg-eaters" and similar diet-based labels reduce people to a dietary habit. The practice of eating or using other animals is an expression of an ideology — the belief that other animals are available for human use. The label should reflect the ideology, with the practice named as its expression when context requires it.
+
+Use the following, matched to context:
+
+| When to use | Phrasing |
+|-------------|----------|
+| Default replacement in most contexts | "those who continue to exploit other animals" |
+| When the dietary practice specifically needs naming | "those who continue to treat other animals as food and products" |
+| When the worldview behind the practice is in focus | "those who still regard other animals as resources" |
+| When addressing someone directly | "you continue to exploit other animals" |
+| When the ideology itself is the subject | "those still acting on the ideology that other animals are available for human use" |
+| When a shorter form is needed | "those who continue to use other animals" |
+
+The person is not defined by what they eat. They are defined by what they believe other animals are. The dietary practice is evidence of that belief, not the identity itself.
+
 ---
 
 ## Vocabulary Variation
