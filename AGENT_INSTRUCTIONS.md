@@ -250,6 +250,33 @@ Apply each of the following in every corrected passage:
 
 ---
 
+## Vocabulary Variation
+
+Repeat key terms only when repetition is deliberate for emphasis. Otherwise rotate through the available vocabulary. Mechanical repetition of the same word in every correction flattens the writing and reduces the impact of each individual use.
+
+### The property relationship — vary these:
+property, commodity, resource, object, tool, instrument, raw material, asset, product, thing, means to an end
+
+Each carries a slightly different shade: "property" is legal and relational; "commodity" emphasises market value; "resource" emphasises utility; "object" and "thing" emphasise dehumanisation; "tool" and "instrument" emphasise use as a means; "raw material" emphasises industrial processing. Choose the word that fits the specific exploitation being described.
+
+### The wrong itself — vary these:
+the wrong, the injustice, the violation, the offence, what is being done, what is at stake, the harm, the structural claim
+
+Reserve "the wrong" for moments of direct confrontation with the principle. Use "the injustice" when the systemic dimension is in focus. Use "the violation" when the specific act on an individual is being named.
+
+### Describing the relationship of use — vary these:
+exploited, used, owned, dominated, subjugated, reduced to, classified as, treated as, regarded as, held as, kept as, bred as, raised as
+
+Match the verb to the specific context: "exploited" is the broadest; "owned" names the legal/relational structure; "bred as" or "raised as" are precise for farming contexts; "reduced to" or "classified as" work when the ideology of the oppressor is in focus.
+
+### The act of non-consent — vary these (but avoid "consent" language, which implies exploitation would be fine with consent):
+without agreement, without her say, without any basis in right, by assumption of right, by human decree, by treating her as available, as though her life belonged to someone else
+
+### The person doing the exploiting — vary these:
+the exploiter, the owner, the industry, the system, the relationship, those who treat other animals as property, those who assume the right to use other animals
+
+---
+
 ## Scope and Exceptions
 
 **Founding texts.** Leslie Cross, Donald Watson, and other founders' original writing is not subject to correction. Quote as written. If the language would otherwise be flagged (e.g. Cross uses "compassion"), provide historical context — not correction.
