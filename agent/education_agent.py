@@ -37,6 +37,14 @@ def load_content_file(path: Path) -> str:
         raise ValueError(f"Unsupported file type: {suffix}")
 
 
+def enforce_style(text: str) -> str:
+    """Mechanically enforce output style rules that models ignore under pressure."""
+    # Em dashes to comma (covers — U+2014 and – U+2013)
+    text = text.replace("—", ",")
+    text = text.replace("–", ",")
+    return text
+
+
 def review_content(content: str, model: str = "gpt-4o") -> str:
     """Send content to the agent for review and return corrected output."""
     llm = ChatOpenAI(model=model, temperature=0)
@@ -47,7 +55,7 @@ def review_content(content: str, model: str = "gpt-4o") -> str:
     ]
 
     response = llm.invoke(messages)
-    return response.content
+    return enforce_style(response.content)
 
 
 def process_file(input_path: Path) -> Path:
