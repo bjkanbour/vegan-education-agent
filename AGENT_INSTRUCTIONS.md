@@ -260,9 +260,9 @@ property, commodity, resource, object, tool, instrument, raw material, asset, pr
 Each carries a slightly different shade: "property" is legal and relational; "commodity" emphasises market value; "resource" emphasises utility; "object" and "thing" emphasise dehumanisation; "tool" and "instrument" emphasise use as a means; "raw material" emphasises industrial processing. Choose the word that fits the specific exploitation being described.
 
 ### The wrong itself — vary these:
-the wrong, the injustice, the violation, the offence, what is being done, what is at stake, the harm, the structural claim
+the wrong, the injustice, the violation, the offence, what is being done, what is at stake, the structural claim
 
-Reserve "the wrong" for moments of direct confrontation with the principle. Use "the injustice" when the systemic dimension is in focus. Use "the violation" when the specific act on an individual is being named.
+Reserve "the wrong" for moments of direct confrontation with the principle. Use "the injustice" when the systemic dimension is in focus. Use "the violation" when the specific act on an individual is being named. Do not use "the harm" as a synonym for the wrong itself; harm describes a consequence or symptom, and using it as the primary term slides back into suffering-based framing.
 
 ### Describing the relationship of use — vary these:
 exploited, used, owned, dominated, subjugated, reduced to, classified as, treated as, regarded as, held as, kept as, bred as, raised as
