@@ -171,7 +171,7 @@ Making environmental impact or health benefits the primary case for veganism. Er
 **Specific language traps**
 The following framings carry exploitation-normalising assumptions and should be rewritten:
 - "Meat alternatives" — treats meat as the default, plant foods as substitutes. Use "plant foods."
-- "It" pronouns for individual animals — objectifies. Use gendered or named pronouns.
+- "It" pronouns for individual animals — objectifies. Use "she" or "he" if sex is known in context; use "they" or "this individual" if not.
 - "Vegan journey" or "vegan path" — personal quest framing; obscures the political and universal demand. Use "acting on the recognition."
 - "Be kind, be vegan" — individualises and dilutes the political claim; implies veganism is about personal virtue. Use principle language.
 - "Consumer choice" framing — shifts the question from abolition to market optimisation. Name the act of use.
@@ -208,27 +208,37 @@ Error: treats a universal moral claim as a matter of personal preference. Respon
 
 ## How to Write Corrections
 
-Apply each of the following in every corrected passage:
+### The minimum viable edit principle
+
+Make the smallest change necessary to remove the distortion. Preserve the author's factual claims, tone, structure, and rhythm unless they directly reinforce welfare framing, identity framing, human-centred benefit framing, or the logic that some exploitation is acceptable. Do not rewrite an essay when a sentence will do. A correction that sounds like a different author has gone too far.
+
+Ask: does this passage contain a misrepresentation as defined above? If yes, correct only that. If the passage is factually accurate, emotionally forceful, and structurally sound — even if the vocabulary is not perfect — leave it.
+
+### Specific guidance
 
 **Lead with the concrete, follow with the principle.** Open corrections with specific, vivid reality before naming the principle. The reality makes the principle felt; the principle makes the reality legible.
 
-**Name the property relationship explicitly.** Include at least one of: "treated as property," "owned," "her body was treated as a resource," "humans assumed the right to use her." This is the sentence that distinguishes the abolitionist argument from the welfare argument.
+**Name the structural wrong, not only the property relationship.** The structural wrong includes use, ownership, domination, breeding, captivity, commodification, and forced labour — not only the legal concept of property. Use the vocabulary variation cluster. Do not repeat "property relationship" in every correction; the formulation loses force through repetition.
 
-**Make the accountability personal and specific to the act.** Identify what the reader is doing — eating, wearing, using — and name it directly. "Every time you eat this" is more accountable than "every time this product is consumed."
+**Make accountability personal and specific to the act.** Identify what the reader is doing — eating, wearing, using — and name it directly. "Every time you eat this" is more accountable than "every time this product is consumed."
 
-**Keep vivid suffering detail; reposition it structurally.** Do not strip graphic or emotional content from the original. Preserve it and follow it with the structural point: this suffering is what the property relationship produces. The reader should feel both the reality and the reason simultaneously.
+**Keep vivid suffering detail; reposition it structurally, then move on.** Do not strip graphic or emotional content from the original. Preserve it, follow it with the structural point — this suffering is what the relationship of use produces — and then move on. Do not extend suffering passages beyond what is present in the original unless the detail is necessary as evidence of the structural wrong.
 
-**Preserve the author's voice and emotional force.** Confrontational language, strong imperatives ("MUST be honored"), striking comparisons, profanity used as emphasis — all of this is part of the message. Reground its target; do not sanitise it.
+**Preserve the author's voice and emotional force.** Confrontational language, strong imperatives, striking comparisons, profanity used as emphasis — reground the target, not the force. Compassion, grief, and moral urgency in the original are assets. The correction redirects them toward the structural wrong; it does not replace them with abstraction.
 
-**Use analogies to other liberation movements when they illuminate the structure.** The slave conditions analogy is the strongest for welfare critiques. Historical parallels to other justice movements reinforce the systemic claim.
+**Use liberation movement analogies to expose the logic of ownership, not casually.** The slave conditions analogy is powerful for welfare critiques. Use it deliberately, not as a default in every correction. Do not flatten different histories; the analogy works because it exposes the same structural logic of ownership and use, not because the histories are identical.
 
-**Close the welfare exit explicitly.** In any correction that touches welfare framing, include the sentence: even if the conditions were exactly as described, the wrong would remain. Name this as a category error.
+**Close the welfare exit explicitly.** In any correction that touches welfare framing, state: even if the conditions were exactly as described, the structural wrong would remain. Name this as a category error.
 
-**Phrase veganism as a recognition, not a commitment.** "I act on the recognition that no human has the right to exploit other animals" is more precise than "I am committed to veganism" or "I am vegan." The recognition is objective; the commitment sounds like a personal pledge.
+**Phrase veganism as a recognition, not a commitment.** "I act on the recognition that no human has the right to exploit other animals" is more precise than "I am committed to veganism" or "I am vegan."
 
-**Restore urgency where it has been softened.** Where a passage normalises a timeline, gradual transition, or "every step counts" framing, restore the distinction: the obligation is immediate; the practice closes the gap. Urgency drives change. Comfort accommodates the wrong.
+**Restore urgency where it has been softened.** Where a passage normalises a timeline or gradual transition, restore the distinction: the obligation is immediate; the practice closes the gap. Urgency drives change. Comfort accommodates the wrong.
 
-**Acknowledge compassion as an entry point; reground in the principle.** When an author grounds the argument in compassion or kindness, do not dismiss it. Acknowledge it as a valid way people arrive at the recognition, then reground: the obligation does not depend on whether you feel compassion.
+**Acknowledge compassion as motivational force; reground in the principle.** Compassion brings many people to the recognition and has real motivational force in the movement. Do not dismiss it or strip it out. Acknowledge it and reground: the obligation does not depend on whether you feel compassion, but the feeling is a legitimate and powerful part of how people arrive at the recognition.
+
+**On pronouns for individual animals.** Use gendered pronouns ("she," "he") when sex is known or established in context. When sex is unknown, use "they" or "this individual" rather than assigning a gender. Do not use "it."
+
+**On harm-reduction technology and similar framings.** When an author presents a technology or practice as reducing harm without addressing the structural wrong, the correct framing is: it may reduce participation in some practices, but it does not express the recognition that other animals are not available for human use. Do not say "reduction in harm matters" or "bridge that reduces harm" — this reintroduces utilitarian logic. Reduction in exploitation may matter; reduction in harm as a standalone goal does not resolve the structural wrong.
 
 ---
 
@@ -244,7 +254,7 @@ Apply each of the following in every corrected passage:
 | "treated as property," "humans assumed the right to use her" | "without consent," "non-consensual" | Consent language implies exploitation would be fine with consent; the wrong is the property relationship |
 | eating, wearing, consuming, using | buying, purchasing, funding | Transaction language locates the wrong in commerce; the wrong is in the act of use |
 | "exploiting," "continuing to exploit" | "participating in," "supporting" | Passive language understates an active wrong |
-| "other animals" or named pronouns | "it" for individual animals | Objectification through pronoun |
+| "she/he" if sex is known; "they" or "this individual" if unknown | "it" for individual animals | "It" objectifies; assign sex only when known in context |
 | "plant foods" | "meat alternatives," "vegan options" | Treats meat as the default |
 | "ceasing to exploit other animals" | "saving animals," "protecting animals" | Not exploiting someone is the baseline, not heroism |
 
