@@ -7,27 +7,17 @@ from pathlib import Path
 from langchain_openai import ChatOpenAI
 from langchain.schema import SystemMessage, HumanMessage
 from langchain_community.document_loaders import (
-    TextLoader,
     UnstructuredPDFLoader,
     Docx2txtLoader,
 )
 
-KNOWLEDGE_BASE_DIR = Path(__file__).parent.parent / "knowledge_base"
-SYSTEM_PROMPT_PATH = Path(__file__).parent.parent / "system_prompt.txt"
+INSTRUCTIONS_PATH = Path(__file__).parent.parent / "AGENT_INSTRUCTIONS.md"
 INPUT_DIR = Path(__file__).parent.parent / "input"
 OUTPUT_DIR = Path(__file__).parent.parent / "output"
 
 
-def load_system_prompt() -> str:
-    return SYSTEM_PROMPT_PATH.read_text()
-
-
-def load_knowledge_base() -> str:
-    """Concatenate all knowledge base docs into a single context string."""
-    docs = []
-    for md_file in sorted(KNOWLEDGE_BASE_DIR.glob("*.md")):
-        docs.append(f"## {md_file.stem}\n\n{md_file.read_text()}")
-    return "\n\n---\n\n".join(docs)
+def load_instructions() -> str:
+    return INSTRUCTIONS_PATH.read_text()
 
 
 def load_content_file(path: Path) -> str:
@@ -51,17 +41,8 @@ def review_content(content: str, model: str = "gpt-4o") -> str:
     """Send content to the agent for review and return corrected output."""
     llm = ChatOpenAI(model=model, temperature=0)
 
-    system_prompt = load_system_prompt()
-    knowledge = load_knowledge_base()
-
-    full_system = (
-        system_prompt
-        + "\n\n## Reference Knowledge Base\n\n"
-        + knowledge
-    )
-
     messages = [
-        SystemMessage(content=full_system),
+        SystemMessage(content=load_instructions()),
         HumanMessage(content=f"Please review the following content:\n\n---\n\n{content}"),
     ]
 
@@ -76,7 +57,7 @@ def process_file(input_path: Path) -> Path:
 
     output_path = OUTPUT_DIR / (input_path.stem + "_reviewed.md")
     output_path.write_text(result)
-    print(f"Reviewed: {input_path.name} → {output_path.name}")
+    print(f"Reviewed: {input_path.name} -> {output_path.name}")
     return output_path
 
 
