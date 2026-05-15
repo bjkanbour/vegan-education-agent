@@ -2,34 +2,45 @@
 Vegan Education Agent — reviews content and corrects misrepresentations of veganism.
 """
 
+import logging
+import os
 from pathlib import Path
+
 import anthropic
 import docx2txt
 import fitz  # PyMuPDF
-from dotenv import load_dotenv
 
-load_dotenv()
+logger = logging.getLogger(__name__)
 
 INSTRUCTIONS_PATH = Path(__file__).parent.parent / "AGENT_INSTRUCTIONS.md"
 KB_DIR = Path(__file__).parent.parent / "knowledge_base"
 INPUT_DIR = Path(__file__).parent.parent / "input"
 OUTPUT_DIR = Path(__file__).parent.parent / "output"
 
-MODEL = "claude-sonnet-4-6"
-MAX_TOKENS = 8192
+MODEL = os.getenv("ANTHROPIC_MODEL", "claude-sonnet-4-6")
+MAX_TOKENS = int(os.getenv("ANTHROPIC_MAX_TOKENS", "8192"))
 
 _client: anthropic.Anthropic | None = None
 _system_prompt: str | None = None
+
+_total_input_tokens = 0
+_total_output_tokens = 0
 
 
 def _get_client() -> anthropic.Anthropic:
     global _client
     if _client is None:
-        _client = anthropic.Anthropic()
+        api_key = os.getenv("ANTHROPIC_API_KEY")
+        if not api_key:
+            raise EnvironmentError(
+                "ANTHROPIC_API_KEY is not set. Copy .env.example to .env and add your key."
+            )
+        _client = anthropic.Anthropic(api_key=api_key, max_retries=3)
     return _client
 
 
 def _build_system_prompt() -> str:
+    """Build the full system prompt from instructions + all KB files."""
     instructions = INSTRUCTIONS_PATH.read_text()
     kb_files = sorted(KB_DIR.glob("*.md"))
     sections = [f"### {f.name}\n\n{f.read_text()}" for f in kb_files]
@@ -46,6 +57,7 @@ def _build_system_prompt() -> str:
 
 
 def _get_system_prompt() -> str:
+    """Return the cached system prompt, building it on first call."""
     global _system_prompt
     if _system_prompt is None:
         _system_prompt = _build_system_prompt()
@@ -68,10 +80,18 @@ def load_content_file(path: Path) -> str:
 
 def review_content(content: str) -> str:
     """Send content to the agent for review and return corrected output."""
+    global _total_input_tokens, _total_output_tokens
+
     response = _get_client().messages.create(
         model=MODEL,
         max_tokens=MAX_TOKENS,
-        system=_get_system_prompt(),
+        system=[
+            {
+                "type": "text",
+                "text": _get_system_prompt(),
+                "cache_control": {"type": "ephemeral"},
+            }
+        ],
         messages=[
             {
                 "role": "user",
@@ -79,6 +99,27 @@ def review_content(content: str) -> str:
             }
         ],
     )
+
+    if response.stop_reason == "max_tokens":
+        logger.warning("Response truncated (stop_reason=max_tokens) — output is incomplete.")
+
+    if not response.content or response.content[0].type != "text":
+        raise ValueError(
+            f"Unexpected API response: stop_reason={response.stop_reason}, "
+            f"content={response.content!r}"
+        )
+
+    usage = response.usage
+    _total_input_tokens += usage.input_tokens
+    _total_output_tokens += usage.output_tokens
+    logger.info(
+        "Tokens — input: %d, output: %d (cache_read: %s, cache_write: %s)",
+        usage.input_tokens,
+        usage.output_tokens,
+        getattr(usage, "cache_read_input_tokens", "n/a"),
+        getattr(usage, "cache_creation_input_tokens", "n/a"),
+    )
+
     return response.content[0].text
 
 
@@ -89,28 +130,32 @@ def process_file(input_path: Path) -> Path | None:
     try:
         content = load_content_file(input_path)
     except Exception as e:
-        print(f"  Skipped {input_path.name}: could not load ({e})")
+        logger.error("Skipped %s: could not load (%s: %s)", input_path.name, type(e).__name__, e)
         return None
 
     try:
         result = review_content(content)
     except Exception as e:
-        print(f"  Failed  {input_path.name}: API error ({e})")
+        logger.error("Failed %s: API error (%s: %s)", input_path.name, type(e).__name__, e)
         return None
 
     output_path = OUTPUT_DIR / (input_path.stem + "_reviewed.md")
     output_path.write_text(result)
-    print(f"  Reviewed {input_path.name} -> {output_path.name}")
+    logger.info("Reviewed %s -> %s", input_path.name, output_path.name)
     return output_path
 
 
-def process_all_inputs():
+def process_all_inputs() -> None:
     """Process every supported file in the input/ directory."""
+    global _total_input_tokens, _total_output_tokens
+    _total_input_tokens = 0
+    _total_output_tokens = 0
+
     supported = {".txt", ".md", ".pdf", ".docx"}
     files = sorted(f for f in INPUT_DIR.iterdir() if f.suffix.lower() in supported)
 
     if not files:
-        print("No files found in input/. Drop .txt, .md, .pdf, or .docx files there.")
+        logger.info("No files found in input/. Drop .txt, .md, .pdf, or .docx files there.")
         return
 
     processed, skipped = 0, 0
@@ -120,4 +165,10 @@ def process_all_inputs():
         else:
             skipped += 1
 
-    print(f"\nDone. {processed} reviewed, {skipped} skipped.")
+    logger.info(
+        "Done. %d reviewed, %d skipped. Total tokens — input: %d, output: %d.",
+        processed,
+        skipped,
+        _total_input_tokens,
+        _total_output_tokens,
+    )
