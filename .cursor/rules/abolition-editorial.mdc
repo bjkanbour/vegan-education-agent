@@ -1,0 +1,16 @@
+---
+description: Baseline abolitionist editorial constraints for KB and ADAPTT rewrites
+alwaysApply: true
+---
+
+# Abolitionist editorial baseline
+
+When generating or rewriting advocacy or educational prose in this workspace:
+
+- Veganism is a **recognition**, not an identity slogan: no substituting diet, wellness, kindness, consumer choice, harm-reduction calculus, or “plant-based alone” for the principle against exploitation.
+- **Exploitation** (treating others as property, resources, or production units under human control) is the structural wrong. **Suffering** belongs as **evidence** of exploitation, never as proof that painless exploitation could be acceptable.
+- **Welfare and humane labels**: treat nicer conditions as **irrelevant to the abolitionist question** whenever the passage implies they resolve the ethical issue.
+- Accountability in concrete **acts of use** (eating, wearing, consuming bodies and secretions), not only purchase or donation language. Keep **direct `you` address** and **forward summons** (meet the recognition, refuse the next act of use, organise toward liberation) when the piece confronts the reader; do not drift into bloodless third person unless the genre already is reportorial.
+- **Output hygiene**: follow the repo’s `AGENT_INSTRUCTIONS.md` hard rule; do **not** use em dashes in agent-authored prose (use commas, semicolons, or restructure).
+
+For ADAPTT work, prefer **publish-ready in-file replacement** preserving headings, anchors, and links unless the human asks for an audit-only memo.

@@ -1,71 +1,53 @@
-# Vegan Education Agent
+# Vegan Education Companion
 
-An AI agent that reviews written content and corrects language that misrepresents veganism — restoring it to its accurate definition as an abolitionist movement against animal exploitation.
+Editorial **companion repository** for rewriting [ADAPTT](https://adaptt.org/aboutadaptt.html) (and similar) content through an **abolitionist, anti-exploitation** lens. This repo holds the **knowledge base** and **unified agent instructions** you attach in Cursor.
 
-## What This Agent Does
+**Offline scaffold:** `scripts/adaptt-rewrite-batch.mjs --prepare` emits one **review Markdown stub per migrated shard** under the ADAPTT site (`content/rewrite-reviews/`) so you can log summaries and pasted HTML while you rewrite in Cursor (no keys, no network). See [**docs/RUNBOOK.md**](docs/RUNBOOK.md).
 
-Veganism is widely misrepresented. Common distortions include framing it as:
-- A diet or lifestyle choice
-- A harm-reduction or suffering-reduction movement
-- An anti-cruelty or kindness/compassion movement
-- A general peace or wellness philosophy
-- Interchangeable with "plant-based"
+The **ADAPTT** site lives in its own repo (`ADAPTT/site`). Use a sibling clone and symlink **`projects/adaptt/site` → `../../../ADAPTT/site`** from this repo root so the scaffold script resolves the checkout. Ship edits on your dedicated rewrite branch; see [**docs/RUNBOOK.md**](docs/RUNBOOK.md).
 
-This agent reads content and corrects those misrepresentations against the authoritative definition:
+## Mental model
 
-> **"The principle that man should live without exploiting animals."**
-> — Leslie J. Cross & The Vegan Society (1950)
+| Location | Role |
+|----------|------|
+| This repo (`vegan-education-agent`) | `AGENT_INSTRUCTIONS.md`, `knowledge_base/`, prompts in `docs/` |
+| ADAPTT checkout (elsewhere on disk) | Source pages you edit **in place**; git history ships the work |
 
-Veganism is a **moral principle** — abolitionist, deontic, and concerned with ending all animal exploitation.
+Using Cursor together with ADAPTT: open a multi-root workspace with both folders so subagents can edit ADAPTT files while `@` referencing this repo’s instructions and KB.
 
-## Supported Input Formats
+## Quick start with Cursor
 
-- `.txt` — plain text
-- `.md` — markdown (articles, blog posts)
-- `.pdf` — documents
-- `.docx` — Word documents
+1. Clone ADAPTT and this repo side by side (recommended), for example `~/Projects/ADAPTT` and `~/Projects/vegan-education-agent`.
 
-## Setup
+2. In Cursor: **File → Add Folder to Workspace…** add **both** roots so `@` mentions can pull from companion files while editing ADAPTT.
 
-```bash
-python -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
-cp .env.example .env
-# Add your ANTHROPIC_API_KEY to .env
-```
+3. Create a long-lived rewrite branch on ADAPTT (see [**docs/RUNBOOK.md**](docs/RUNBOOK.md)).
 
-## Usage
+4. Open [**docs/SUBAGENT_PROMPTS.md**](docs/SUBAGENT_PROMPTS.md): copy **pass (a)** then **pass (b)** for each page or chunk. Track claims in [**docs/PROGRESS.md**](docs/PROGRESS.md).
 
-**Review inline text:**
-```bash
-python main.py --text "Veganism is a plant-based diet focused on reducing animal suffering."
-```
+5. In every task, `@` attach:
 
-**Review a single file:**
-```bash
-python main.py --file path/to/article.md
-```
+   - `AGENT_INSTRUCTIONS.md`
+   - whatever slice of `knowledge_base/` the task needs (for example `@knowledge_base/approved_prohibited_terminology.md`)
 
-**Batch-review all files in `input/`:**
-```bash
-# Drop .txt / .md / .pdf / .docx files into input/
-python main.py
-# Reviewed output appears in output/
-```
+For a quick sanity check of tone and structure, see [**docs/EXAMPLE_REWRITE_OUTPUT.md**](docs/EXAMPLE_REWRITE_OUTPUT.md) (synthetic before/after). For a **profane register** sample that keeps blunt language while fixing the lens, see [**docs/EXAMPLE_REWRITE_OUTPUT_VULGAR.md**](docs/EXAMPLE_REWRITE_OUTPUT_VULGAR.md) (strong language).
 
-## Output Format
+### Optional project rules
 
-For each piece of content, the agent returns:
-1. **Original excerpt** — the problematic phrase
-2. **Issue** — what is misrepresented and why
-3. **Corrected version** — accurate rewrite
-4. **Explanation** — one-sentence distinction
-5. **Revised Full Text** — the entire content with all corrections applied
+[`.cursor/rules/abolition-editorial.mdc`](.cursor/rules/abolition-editorial.mdc) restates baseline constraints so they stay visible in-session.
 
-## Knowledge Base
+## What “good” means
 
-The agent's full knowledge base is loaded into context on every run. All 19 files in `knowledge_base/` are included:
+- Veganism framed as **recognition** that no human has the right to exploit other animals (abolitionist, duty-based), not as a diet fad, kindness club, or harm-reduction scoreboard.
+- **Exploitation** (ownership, use, breeding for our purposes) named as the structural wrong; **suffering** repositioned as **evidence** of that wrong, not a substitute foundation.
+- **Welfare framing** challenged as a category error where it appears: gentle conditions still leave the wrong intact.
+- Prose tightened or expanded for **impact** using the editorial principles in `AGENT_INSTRUCTIONS.md`; avoid cosmetic rewrites where the passage is already aligned.
+
+Full doctrine and examples stay in **`AGENT_INSTRUCTIONS.md`** and **`knowledge_base/`**; skim [**docs/RUNBOOK.md**](docs/RUNBOOK.md) for workflow and merge gates.
+
+## Knowledge base
+
+Nineteen reference documents in `knowledge_base/` (founding definitions, philosophy, correction style, terminology, argument patterns, movement context). They are meant to be **referenced**, not pasted into ADAPTT as attributions.
 
 | File | Contents |
 |------|----------|
@@ -89,6 +71,8 @@ The agent's full knowledge base is loaded into context on every run. All 19 file
 | `VISION_AND_MOVEMENT.md` | Systemic change vision |
 | `how_vegan_society_lost_the_plot.md` | History of definitional drift in the movement |
 
-## Source Repository
+Imported from [**vegan-activist-ai**](https://github.com/bjkanbour/vegan-activist-ai).
 
-Knowledge base imported from [vegan-activist-ai](https://github.com/bjkanbour/vegan-activist-ai).
+## Contributing
+
+Improve instructions or KB markdown here when you refine the project line. Prefer small PRs per theme (terminology-only, doctrine clarification, prompts runbook tweak).

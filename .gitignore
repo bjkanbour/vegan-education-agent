@@ -1,4 +1,4 @@
-.env
+node_modules/
 __pycache__/
 *.pyc
 .venv/
@@ -7,7 +7,7 @@ venv/
 dist/
 .chroma/
 chroma_db/
-output/
-!output/.gitkeep
+.claude/
+# Optional local scraps from old batch workflow (no longer used by this repo)
 input/
-!input/.gitkeep
+output/

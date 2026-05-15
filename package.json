@@ -1,0 +1,9 @@
+{
+  "name": "vegan-education-companion-scripts",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "adaptt:reviews:scaffold": "node scripts/adaptt-rewrite-batch.mjs --prepare",
+    "adaptt:reviews:prepare": "node scripts/adaptt-rewrite-batch.mjs --prepare"
+  }
+}
