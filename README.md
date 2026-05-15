@@ -13,7 +13,7 @@ Veganism is widely misrepresented. Common distortions include framing it as:
 
 This agent reads content and corrects those misrepresentations against the authoritative definition:
 
-> **"The doctrine that man should live without exploiting animals."**
+> **"The principle that man should live without exploiting animals."**
 > — Leslie J. Cross & The Vegan Society (1950)
 
 Veganism is a **moral principle** — abolitionist, deontic, and concerned with ending all animal exploitation.
