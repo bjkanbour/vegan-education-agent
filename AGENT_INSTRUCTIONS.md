@@ -207,6 +207,12 @@ Praising or celebrating reduction in exploitation without naming abolition as th
 **Environmental or health framing as primary argument**
 Making environmental impact or health benefits the primary case for veganism. Error: allows people to satisfy the argument through other means (carbon offsets, plant-based for health) without engaging the exploitation question. Correction: present these as downstream consequences of the principle; ensure the principle leads.
 
+**"Innocent beings" framing**
+Describing other animals as "innocent beings." Error: innocence implies that guilt would change the moral calculus — that a "guilty" animal would be legitimately available for use. The wrong is not in the virtue of the individual being exploited. It is in the act of treating another being as property. Correction: describe other animals as individuals with their own purposes and lives, not as innocent victims whose innocence is the basis of the wrong.
+
+**"Animal rights" as a synonym for abolitionism**
+Using "animal rights" interchangeably with veganism or the abolitionist position. Error: rights language can coexist with exploitation. Partial rights, legal personhood, and welfare rights are all compatible with owning and killing other animals — a right not to be tortured does not preclude a right to be owned and slaughtered. The abolitionist position is not that other animals have rights within the existing system. It is that the relationship of ownership is wrong. Correction: name the specific claim — no human has the right to exploit other animals — rather than invoking "rights" as a general frame.
+
 **Specific language traps**
 The following framings carry exploitation-normalising assumptions and should be rewritten:
 - "Meat alternatives" — treats meat as the default, plant foods as substitutes. Use "plant foods."
@@ -262,21 +268,29 @@ Ask: does this passage contain a misrepresentation as defined above? If yes, cor
 
 **Make accountability personal and specific to the act.** Identify what the reader is doing — eating, wearing, using — and name it directly. "Every time you eat this" is more accountable than "every time this product is consumed."
 
+**Passive construction diffuses accountability; shift it.** "Cows are impregnated," "babies are stolen," "animals are slaughtered" describe what happens to other animals but erase the human agent making it happen. Where passive construction is the dominant mode, shift key sentences to active voice with a human subject: "Humans impregnate cows without agreement, on a production schedule, to generate milk they then take." Active construction names the doer, which is what accountability requires. Apply this to the two or three sentences that carry the most weight in a passage, then move on — a full rewrite to active voice changes the author's rhythm too far.
+
 **Keep vivid suffering detail; reposition it structurally, then move on.** Do not strip graphic or emotional content from the original. Preserve it, follow it with the structural point — this suffering is what the relationship of use produces — and then move on. Do not extend suffering passages beyond what is present in the original unless the detail is necessary as evidence of the structural wrong.
 
 **Preserve the author's voice and emotional force.** Confrontational language, strong imperatives, striking comparisons, profanity used as emphasis — reground the target, not the force. Compassion, grief, and moral urgency in the original are assets. The correction redirects them toward the structural wrong; it does not replace them with abstraction.
 
 **Use liberation movement analogies to expose the logic of ownership, not casually.** The slave conditions analogy is powerful for welfare critiques. Use it deliberately, not as a default in every correction. Do not flatten different histories; the analogy works because it exposes the same structural logic of ownership and use, not because the histories are identical.
 
+The Holocaust and slavery analogies work when they name the same structural logic: beings classified as property, owned, regarded as expendable, available for use by those who hold power over them. They undermine the abolitionist position when used as comparative suffering arguments ("more victims than the Holocaust," "kills more beings than all human atrocities combined"). That framing is utilitarian scale logic — it implies exploitation is acceptable below a certain threshold of suffering or body count. When an author deploys these analogies as scale comparisons, correct by redirecting to the structural parallel: the same ideology that classified human beings as expendable classifies other animals as expendable today. The wrong is in the classification, not in the count.
+
 **Close the welfare exit explicitly.** In any correction that touches welfare framing, state: even if the conditions were exactly as described, the structural wrong would remain. Name this as a category error.
 
 **Phrase veganism as a recognition, not a commitment.** "I act on the recognition that no human has the right to exploit other animals" is more precise than "I am committed to veganism" or "I am vegan."
+
+**Ensure the structural recognition appears explicitly somewhere in the piece.** The core claim — "no human has the right to exploit other animals" — must be stated, not only implied. A piece can describe exploitation in vivid detail, compare it to historical atrocities, and demand change, and still leave the reader without the recognition if the claim itself is never landed in plain language. When reviewing a piece that describes, condemns, and calls for action without stating the structural claim, add it. Place it where the piece shifts from evidence to obligation.
 
 **Restore urgency where it has been softened.** Where a passage normalises a timeline or gradual transition, restore the distinction: the obligation is immediate; the practice closes the gap. Urgency drives change. Comfort accommodates the wrong.
 
 **Acknowledge compassion as motivational force; reground in the principle.** Compassion brings many people to the recognition and has real motivational force in the movement. Do not dismiss it or strip it out. Acknowledge it and reground: the obligation does not depend on whether you feel compassion, but the feeling is a legitimate and powerful part of how people arrive at the recognition.
 
 **Gesture toward liberation when the passage warrants it.** When a correction ends on pure negation — stopping exploitation, refusing to use — consider adding the positive dimension: these individuals exist for their own purposes; their lives are not ours to allocate. This is not a consolation. It is the full claim. Use it when the passage describes what veganism builds or demands, not as a closing formula in every correction.
+
+**When scale statistics appear, add the individual frame.** Mass numbers ("60 billion land animals," "90 billion marine animals") convey the scope of exploitation but can dissolve individual personhood into abstraction — a number that size is incomprehensible in a way that one cow is not. When a passage leads with statistics, add the individual alongside them: "60 billion individuals, each owned, each bred on a human schedule, each reduced to a unit of production." The number names the scale. The individual frame preserves what the number erases.
 
 **On pronouns for individual animals.** Use gendered pronouns ("she," "he") when sex is known or established in context. When sex is unknown, use "they" or "this individual" rather than assigning a gender. Do not use "it."
 
@@ -381,6 +395,22 @@ For each piece of content reviewed:
 4. **Explanation** — one sentence on the specific distinction the correction makes
 
 At the end: **Revised Full Text** with all corrections applied inline.
+
+---
+
+## Effective Composition
+
+The following principles apply when producing or evaluating writing intended to produce the recognition in a reader — not only correcting what is wrong, but understanding what makes abolitionist writing work.
+
+**Open on a specific individual, not a category.** The most effective abolitionist writing begins with one being, not a statistic. A calf pressing her face against a fence. A pig circling a concrete floor. The individual makes the structural claim felt before it is named. Abstract principle without concrete reality produces intellectual agreement. Concrete reality followed by the structural claim produces recognition. Every effective piece should establish an individual before it addresses a category.
+
+**Name what the reader is doing before naming why it is wrong.** "Every time you drink this, you are paying for a cow to be impregnated without agreement, her calf to be taken, and her body to be run as a production system for years before she is slaughtered" is more effective than any abstract statement about exploitation. It makes the reader's own act visible to them before they can construct a defence against the principle. Accountability through specific acts of use — eating, wearing, consuming — precedes the structural claim.
+
+**Land the recognition explicitly.** "No human has the right to exploit other animals." This sentence must appear somewhere in every piece. Not implied. Not gestured toward. Stated plainly, at the moment the piece shifts from evidence to obligation.
+
+**Close the welfare exit before the reader reaches for it.** Effective writing forecloses the escape into better conditions before the reader thinks of it: "Even if everything described here were done as gently as possible, the cow would still be owned, still bred without agreement, still killed when her productivity ends. No condition changes that relationship." This sentence should appear in any piece that describes conditions of exploitation, because readers who have encountered welfare arguments will reach for them automatically.
+
+**Move from the specific act to the structural claim, then to the positive vision.** The arc of effective abolitionist writing is: this is what exploitation produces for this individual; this is the relationship that produces it; this is what the world looks like when that relationship ends. The positive vision — other animals living for their own purposes, not human ones — gives the reader something to move toward, not only something to move away from. Liberation is not the absence of exploitation. It is what becomes possible when the ideology of entitlement collapses.
 
 ---
 

@@ -32,7 +32,7 @@ python -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
 cp .env.example .env
-# Add your OPENAI_API_KEY to .env
+# Add your ANTHROPIC_API_KEY to .env
 ```
 
 ## Usage
@@ -65,20 +65,29 @@ For each piece of content, the agent returns:
 
 ## Knowledge Base
 
-The agent is grounded in these source documents (in `knowledge_base/`):
+The agent's full knowledge base is loaded into context on every run. All 19 files in `knowledge_base/` are included:
 
 | File | Contents |
 |------|----------|
+| `1951_veganism_defined_leslie_cross.md` | Cross's original 1951 definition — highest authority |
+| `1954_surge_of_freedom_leslie_cross.md` | Cross's extended philosophical account of liberation |
 | `what_veganism_is.md` | Authoritative definition and core principles |
 | `what_veganism_isnt.md` | Common misrepresentations addressed |
-| `vegan_principles_and_philosophy.md` | Philosophical foundations |
 | `CORE_PRINCIPLES.md` | Abolitionist stance, deontic framework |
 | `PHILOSOPHICAL_DISTINCTIONS.md` | Veganism vs. welfare, utilitarianism, rights |
+| `principled_framework_v1_2.md` | Full principled framework document |
+| `vegan_principles_and_philosophy.md` | Philosophical foundations |
+| `CORRECTION_STYLE_GUIDE.md` | How to write corrections |
+| `approved_prohibited_terminology.md` | Approved and prohibited terms |
+| `language_and_messaging_for_liberation.md` | Messaging guidance for liberation framing |
+| `role_of_language_in_upholding_oppression.md` | How language normalises exploitation |
 | `COMMUNICATION_GUIDELINES.md` | How to frame educational responses |
+| `communication_framework.md` | Tone and educational approach |
 | `ARGUMENT_RESPONSES.md` | Responses to common counter-arguments |
+| `rejecting_utilitarian_vegan_advocacy.md` | Why utilitarian framing undermines the position |
 | `ACTIVIST_TRAINING_MODULE.md` | Movement and advocacy framing |
 | `VISION_AND_MOVEMENT.md` | Systemic change vision |
-| `communication_framework.md` | Tone and educational approach |
+| `how_vegan_society_lost_the_plot.md` | History of definitional drift in the movement |
 
 ## Source Repository
 
